@@ -7,7 +7,14 @@ having a better configuration.
 
 to run exec
 
-> npm install
-> npm run test
+```javascript
+npm install
+npm run test
+
+yarn install
+yarn test
+```
 
 Solve "unexpectec token" error from jest, babel-jest
+
+here we solve problems related to https://github.com/facebook/jest/issues/2081
