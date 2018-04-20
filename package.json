@@ -4,21 +4,42 @@
   "homepage": "https://suchipi.github.io/react-testing-example-lockscreen",
   "license": "MIT",
   "devDependencies": {
-    "enzyme": "^2.7.1",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
     "gh-pages": "^0.12.0",
+    "jest": "^22.4.3",
     "react-addons-test-utils": "^15.4.2",
-    "react-scripts": "0.8.5"
+    "regenerator-runtime": "^0.11.1"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "eslint": "^4.19.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "jest --no-cache"
+  },
+  "jest": {
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "verbose": true,
+    "moduleDirectories": ["node_modules", "src"],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleFileExtensions": ["js", "jsx"],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
   }
 }
