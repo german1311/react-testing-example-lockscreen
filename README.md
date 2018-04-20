@@ -1,7 +1,7 @@
 This Project of fork of https://github.com/suchipi/react-testing-example-lockscreen
 
 
-It is was adapted to work with jest, react 15, and enzime.
+It is was adapted to work with jest, react 15, and enzyme.
 
 having a better configuration.
 
